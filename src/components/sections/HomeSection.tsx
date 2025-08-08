@@ -1,7 +1,7 @@
 import React from 'react';
 import { RetroWindow } from '../RetroWindow';
 import { RetroButton } from '../ui/retro-button';
-import heroBanner from '@/assets/hero-banner.png';
+import heroBanner from '@/assets/hero-95-floppy.png';
 
 interface HomeSectionProps {
   onSectionChange: (section: 'samples' | 'beats') => void;
@@ -15,7 +15,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
         <div className="text-center space-y-4">
           <img
             src={heroBanner}
-            alt="RetroBeats Hero"
+            alt="Windows 95 style 8-bit retro music production hero with CRT and floppy disks"
             loading="lazy"
             decoding="async"
             className="w-full max-w-xl mx-auto border-2 border-[hsl(var(--button-shadow))]"
