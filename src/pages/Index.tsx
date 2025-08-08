@@ -31,15 +31,13 @@ const Index = () => {
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background pixel-grid">
         <div className="container mx-auto p-4">
           <Navigation 
             currentSection={currentSection} 
             onSectionChange={setCurrentSection} 
           />
-          <div className="animate-in fade-in-50 duration-500">
-            {renderSection()}
-          </div>
+          {renderSection()}
         </div>
       </div>
     </CartProvider>
