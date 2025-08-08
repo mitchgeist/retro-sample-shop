@@ -6,57 +6,82 @@ import samplePackIcon from '@/assets/sample-pack-icon.png';
 const samplePacks = [
   {
     id: 'sp-001',
-    name: 'CHIPTUNE ESSENTIALS',
-    price: 19.99,
-    description: '50 classic 8-bit sounds, leads, and arpeggios',
+    name: 'CHIPTUNE ESSENTIALS VOL.1',
+    price: 24.99,
+    description: '60 classic 8-bit sounds, leads, and arpeggios',
     image: samplePackIcon
   },
   {
     id: 'sp-002',
-    name: 'RETRO DRUMS VOL.1',
-    price: 15.99,
-    description: 'Authentic drum samples from vintage machines',
+    name: 'RETRO DRUMS COLLECTION',
+    price: 19.99,
+    description: '45 authentic drum samples from vintage machines',
     image: samplePackIcon
   },
   {
     id: 'sp-003',
-    name: 'SYNTHWAVE STARTER',
-    price: 24.99,
-    description: '80s-inspired synth loops and one-shots',
+    name: 'SYNTHWAVE STARTER PACK',
+    price: 29.99,
+    description: '75 80s-inspired synth loops and one-shots',
     image: samplePackIcon
   },
   {
     id: 'sp-004',
-    name: 'PIXEL BASS PACK',
-    price: 17.99,
-    description: 'Deep 8-bit bass lines and sub frequencies',
+    name: 'PIXEL BASS COLLECTION',
+    price: 22.99,
+    description: '40 deep 8-bit bass lines and sub frequencies',
     image: samplePackIcon
   },
   {
     id: 'sp-005',
-    name: 'ARCADE ATMOSPHERES',
-    price: 21.99,
-    description: 'Ambient textures and sound effects',
+    name: 'ARCADE ATMOSPHERES VOL.1',
+    price: 26.99,
+    description: '55 ambient textures and retro sound effects',
     image: samplePackIcon
   },
   {
     id: 'sp-006',
-    name: 'GLITCH TOOLKIT',
-    price: 18.99,
-    description: 'Digital artifacts and broken beats',
+    name: 'GLITCH TOOLKIT DELUXE',
+    price: 23.99,
+    description: '50 digital artifacts and broken beat elements',
+    image: samplePackIcon
+  },
+  {
+    id: 'sp-007',
+    name: 'LOFI CHIPTUNE VIBES',
+    price: 27.99,
+    description: '65 chill 8-bit loops with vinyl warmth',
+    image: samplePackIcon
+  },
+  {
+    id: 'sp-008',
+    name: 'GAMEBOY CLASSICS',
+    price: 21.99,
+    description: '35 authentic Game Boy inspired sounds',
     image: samplePackIcon
   }
 ];
 
 export const SamplePacksSection: React.FC = () => {
   return (
-    <RetroWindow title="SAMPLE_PACKS.DIR - 6 ITEMS FOUND">
+    <RetroWindow title={`SAMPLE_PACKS.DIR - ${samplePacks.length} ITEMS FOUND`}>
       <div className="space-y-4">
-        <div className="border-2 border-[hsl(var(--button-shadow))] p-2 bg-background">
+        <div className="border-2 border-[hsl(var(--button-shadow))] p-4 bg-background">
           <p className="retro-font text-sm text-muted-foreground">
             {`> Displaying premium sample packs for music production`}<br/>
-            {`> All packs include commercial license and instant download`}<br/>
-            {`> Compatible with: FL Studio, Ableton, Logic Pro, Pro Tools`}
+            {`> All packs include royalty-free commercial license`}<br/>
+            {`> High-quality WAV files (24-bit/44.1kHz)`}<br/>
+            {`> Compatible with all major DAWs and samplers`}
+          </p>
+        </div>
+
+        <div className="text-center space-y-3 py-4">
+          <h2 className="pixel-font text-xl text-primary retro-glow">
+            AUTHENTIC 8-BIT SAMPLE LIBRARY
+          </h2>
+          <p className="retro-font text-muted-foreground max-w-2xl mx-auto">
+            Carefully crafted samples that capture the essence of classic gaming and retro computing. 
+            Each pack is designed to inspire and elevate your productions.
           </p>
         </div>
         

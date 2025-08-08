@@ -11,18 +11,20 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
   const { itemCount } = useCart();
 
   return (
-    <nav className="window-chrome bg-card p-2 mb-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="pixel-font text-sm text-primary blink">♪</span>
-          <h1 className="pixel-font text-lg text-foreground">MITCHGEIST.EXE</h1>
+    <nav className="window-chrome bg-gradient-to-r from-card via-card to-muted p-4 mb-6">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="pixel-font text-lg text-primary blink retro-glow">♪</span>
+          <h1 className="pixel-font text-xl text-foreground">MITCHGEIST.EXE</h1>
+          <span className="retro-font text-sm text-muted-foreground hidden sm:inline">v2.0</span>
         </div>
         
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2 justify-center">
           <RetroButton
             variant={currentSection === 'home' ? 'primary' : 'default'}
             size="sm"
             onClick={() => onSectionChange('home')}
+            className="min-w-[80px]"
           >
             HOME
           </RetroButton>
@@ -31,6 +33,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
             variant={currentSection === 'samples' ? 'primary' : 'default'}
             size="sm"
             onClick={() => onSectionChange('samples')}
+            className="min-w-[120px]"
           >
             SAMPLE PACKS
           </RetroButton>
@@ -39,6 +42,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
             variant={currentSection === 'beats' ? 'primary' : 'default'}
             size="sm"
             onClick={() => onSectionChange('beats')}
+            className="min-w-[80px]"
           >
             BEATS
           </RetroButton>
@@ -47,6 +51,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
             variant={currentSection === 'merch' ? 'primary' : 'default'}
             size="sm"
             onClick={() => onSectionChange('merch')}
+            className="min-w-[80px]"
           >
             MERCH
           </RetroButton>
@@ -55,6 +60,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
             variant={currentSection === 'cart' ? 'neon' : 'outline'}
             size="sm"
             onClick={() => onSectionChange('cart')}
+            className="min-w-[100px]"
           >
             CART ({itemCount})
           </RetroButton>
