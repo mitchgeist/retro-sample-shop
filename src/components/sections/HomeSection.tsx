@@ -13,14 +13,16 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
       {/* Hero Section */}
       <RetroWindow title="WELCOME TO RETROBEATS v1.0">
         <div className="text-center space-y-4">
-          <img 
-            src={heroBanner} 
-            alt="RetroBeats Hero" 
-            className="w-full max-w-2xl mx-auto border-2 border-[hsl(var(--button-shadow))]"
+          <img
+            src={heroBanner}
+            alt="RetroBeats Hero"
+            loading="lazy"
+            decoding="async"
+            className="w-full max-w-xl mx-auto border-2 border-[hsl(var(--button-shadow))]"
             style={{ imageRendering: 'pixelated' }}
           />
           
-          <h2 className="pixel-font text-xl text-primary retro-glow">
+          <h2 className="pixel-font text-xl text-foreground">
             PREMIUM 8-BIT SAMPLES & BEATS
           </h2>
           
@@ -30,15 +32,15 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
           </p>
           
           <div className="flex gap-4 justify-center">
-            <RetroButton 
-              variant="retro" 
+            <RetroButton
+              variant="default"
               size="lg"
               onClick={() => onSectionChange('samples')}
             >
               BROWSE SAMPLE PACKS
             </RetroButton>
-            <RetroButton 
-              variant="neon" 
+            <RetroButton
+              variant="outline"
               size="lg"
               onClick={() => onSectionChange('beats')}
             >
@@ -52,7 +54,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
       <div className="grid md:grid-cols-2 gap-4">
         <RetroWindow title="SAMPLE_PACKS.DIR">
           <div className="space-y-3">
-            <h3 className="pixel-font text-sm text-primary">AUTHENTIC 8-BIT SOUNDS</h3>
+            <h3 className="pixel-font text-sm text-foreground">AUTHENTIC 8-BIT SOUNDS</h3>
             <p className="retro-font text-sm">
               → High-quality WAV files<br/>
               → Instant download<br/>
@@ -71,7 +73,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
 
         <RetroWindow title="BEATS.EXE">
           <div className="space-y-3">
-            <h3 className="pixel-font text-sm text-primary">READY-TO-USE BEATS</h3>
+            <h3 className="pixel-font text-sm text-foreground">READY-TO-USE BEATS</h3>
             <p className="retro-font text-sm">
               → Full instrumental tracks<br/>
               → Multiple BPM options<br/>

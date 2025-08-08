@@ -36,10 +36,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className="retro-card pixel-grid">
       {image && (
-        <div className="w-full h-32 bg-muted mb-3 border-2 border-[hsl(var(--button-shadow))] flex items-center justify-center">
-          <img 
-            src={image} 
+        <div className="w-full h-24 bg-muted mb-3 border-2 border-[hsl(var(--button-shadow))] flex items-center justify-center">
+          <img
+            src={image}
             alt={name}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
             style={{ imageRendering: 'pixelated' }}
           />
