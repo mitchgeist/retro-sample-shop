@@ -5,8 +5,9 @@ import { HomeSection } from '@/components/sections/HomeSection';
 import { SamplePacksSection } from '@/components/sections/SamplePacksSection';
 import { BeatsSection } from '@/components/sections/BeatsSection';
 import { CartSection } from '@/components/sections/CartSection';
+import { MerchSection } from '@/components/sections/MerchSection';
 
-type Section = 'home' | 'samples' | 'beats' | 'cart';
+type Section = 'home' | 'samples' | 'beats' | 'merch' | 'cart';
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState<Section>('home');
@@ -19,6 +20,8 @@ const Index = () => {
         return <SamplePacksSection />;
       case 'beats':
         return <BeatsSection />;
+      case 'merch':
+        return <MerchSection />;
       case 'cart':
         return <CartSection />;
       default:

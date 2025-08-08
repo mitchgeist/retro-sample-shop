@@ -3,8 +3,8 @@ import { RetroButton } from './ui/retro-button';
 import { useCart } from './CartProvider';
 
 interface NavigationProps {
-  currentSection: 'home' | 'samples' | 'beats' | 'cart';
-  onSectionChange: (section: 'home' | 'samples' | 'beats' | 'cart') => void;
+  currentSection: 'home' | 'samples' | 'beats' | 'merch' | 'cart';
+  onSectionChange: (section: 'home' | 'samples' | 'beats' | 'merch' | 'cart') => void;
 }
 
 export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange }) => {
@@ -15,7 +15,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="pixel-font text-sm text-primary blink">♪</span>
-          <h1 className="pixel-font text-lg text-foreground">RETROBEATS.EXE</h1>
+          <h1 className="pixel-font text-lg text-foreground">MITCHGEIST.EXE</h1>
         </div>
         
         <div className="flex gap-2">
@@ -41,6 +41,14 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
             onClick={() => onSectionChange('beats')}
           >
             BEATS
+          </RetroButton>
+
+          <RetroButton
+            variant={currentSection === 'merch' ? 'primary' : 'default'}
+            size="sm"
+            onClick={() => onSectionChange('merch')}
+          >
+            MERCH
           </RetroButton>
           
           <RetroButton
