@@ -34,7 +34,7 @@ const Index = () => {
   return (
     <CartProvider>
       <BackgroundEffects />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background crt-screen">
         <div className="container mx-auto p-4">
           <Navigation 
             currentSection={currentSection} 

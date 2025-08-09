@@ -9,7 +9,7 @@ interface RetroWindowProps {
 
 export const RetroWindow: React.FC<RetroWindowProps> = ({ title, children, className }) => {
   return (
-    <div className={cn("window-chrome bg-card", className)}>
+    <div className={cn("window-chrome bg-card crt-phosphor", className)}>
       {/* Title Bar */}
       <div className="bg-primary text-primary-foreground px-2 py-1 flex items-center justify-between border-b-2 border-[hsl(var(--window-shadow))]">
         <span className="retro-font font-bold text-sm">{title}</span>
@@ -27,7 +27,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({ title, children, class
       </div>
       
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 crt-refresh">
         {children}
       </div>
     </div>
