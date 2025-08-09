@@ -4,7 +4,7 @@ import { RetroButton } from '../ui/retro-button';
 import heroBanner from '@/assets/hero-landing-95.webp';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/components/ui/use-toast';
-import ProducerSprite from '@/components/ProducerSprite';
+
 interface HomeSectionProps {
   onSectionChange: (section: 'samples' | 'beats') => void;
 }
@@ -65,7 +65,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
       {/* Hero Section */}
       <RetroWindow title="WELCOME TO MITCHGEIST v1.0">
         <div className="relative text-center space-y-4">
-          <ProducerSprite />
+          
           <img
             src={heroBanner}
             alt="Windows 95 style pixel art music production banner with CRT, floppy disks, and MIDI keyboard"
