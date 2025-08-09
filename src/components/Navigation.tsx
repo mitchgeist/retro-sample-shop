@@ -72,7 +72,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
         <a href="https://open.spotify.com/artist/1PscMkzaEoBfFBNfqdlP4e" aria-label="Spotify" title="Spotify" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Music className="h-4 w-4" />
         </a>
-        <a href="https://bandcamp.com/mitchgeist" aria-label="Bandcamp" title="Bandcamp" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://mitchgeist.bandcamp.com" aria-label="Bandcamp" title="Bandcamp" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Music2 className="h-4 w-4" />
         </a>
         <a href="https://www.tiktok.com/@mitchgeistmitchgeist" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">

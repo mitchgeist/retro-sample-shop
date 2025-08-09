@@ -61,7 +61,7 @@ const FAQ: React.FC = () => {
 
 export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => {
   return (
-    <div className="relative space-y-6">
+    <div className="relative space-y-6 animate-fade-in">
       {/* Hero Section */}
       <RetroWindow title="WELCOME TO MITCHGEIST v1.0">
         <div className="relative text-center space-y-4">
@@ -71,7 +71,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
             alt="Windows 95 style pixel art music production banner with CRT, floppy disks, and MIDI keyboard"
             loading="lazy"
             decoding="async"
-            className="w-full max-w-xl mx-auto border-2 border-[hsl(var(--button-shadow))]"
+            className="w-full max-w-xl mx-auto border-2 border-[hsl(var(--button-shadow))] animate-fade-in"
             style={{ imageRendering: 'pixelated' }}
           />
           
@@ -89,6 +89,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
               variant="default"
               size="lg"
               onClick={() => onSectionChange('samples')}
+              className="hover-scale"
             >
               BROWSE SAMPLE PACKS
             </RetroButton>
@@ -96,6 +97,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ onSectionChange }) => 
               variant="outline"
               size="lg"
               onClick={() => onSectionChange('beats')}
+              className="hover-scale"
             >
               BROWSE BEATS
             </RetroButton>

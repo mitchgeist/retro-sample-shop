@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CartProvider } from '@/components/CartProvider';
 import { Navigation } from '@/components/Navigation';
+import CursorTrail from '@/components/CursorTrail';
 import { HomeSection } from '@/components/sections/HomeSection';
 import { SamplePacksSection } from '@/components/sections/SamplePacksSection';
 import { BeatsSection } from '@/components/sections/BeatsSection';
@@ -38,6 +39,7 @@ const Index = () => {
             onSectionChange={setCurrentSection} 
           />
           {renderSection()}
+          <CursorTrail />
         </div>
       </div>
     </CartProvider>
