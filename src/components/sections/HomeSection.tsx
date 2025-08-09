@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RetroWindow } from '../RetroWindow';
 import { RetroButton } from '../ui/retro-button';
-import heroBanner from '@/assets/hero-landing-95.webp';
+import heroBanner from '@/assets/hero-banner.png';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useToast } from '@/components/ui/use-toast';
 

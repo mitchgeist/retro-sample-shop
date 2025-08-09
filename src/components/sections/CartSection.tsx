@@ -3,7 +3,7 @@ import { RetroWindow } from '../RetroWindow';
 import { RetroButton } from '../ui/retro-button';
 import { useCart } from '../CartProvider';
 import { useToast } from '@/hooks/use-toast';
-
+import { CreditCard, Apple, Wallet } from 'lucide-react';
 export const CartSection: React.FC = () => {
   const { items, removeItem, clearCart, totalPrice } = useCart();
   const { toast } = useToast();
@@ -18,22 +18,14 @@ export const CartSection: React.FC = () => {
       return;
     }
 
+    // Placeholder checkout until Stripe/PayPal keys are provided
     toast({
-      title: "Checkout Started",
-      description: `Processing ${items.length} items totaling $${totalPrice.toFixed(2)}`,
-      duration: 3000,
+      title: "Checkout coming soon",
+      description: "Cards, PayPal, Apple Pay and Google Pay will be enabled once payment keys are added.",
+      duration: 5000,
     });
-
-    // Here you would integrate with your payment system
-    // For demo purposes, we'll just clear the cart after a delay
-    setTimeout(() => {
-      clearCart();
-      toast({
-        title: "Purchase Complete!",
-        description: "Your downloads are being prepared. Check your email for download links.",
-        duration: 5000,
-      });
-    }, 2000);
+    // TODO: Call Supabase Edge Function `create-payment` once configured
+    return;
   };
 
   return (
@@ -104,6 +96,14 @@ export const CartSection: React.FC = () => {
                   ${totalPrice.toFixed(2)}
                 </span>
               </div>
+              <div className="mb-3 flex flex-wrap items-center gap-3 text-muted-foreground">
+                <CreditCard className="h-4 w-4" />
+                <span className="retro-font text-xs">Credit/Debit Cards</span>
+                <Apple className="h-4 w-4" />
+                <span className="retro-font text-xs">Apple Pay</span>
+                <Wallet className="h-4 w-4" />
+                <span className="retro-font text-xs">Google Pay • PayPal</span>
+              </div>
               
               <div className="flex gap-3">
                 <RetroButton
@@ -112,7 +112,7 @@ export const CartSection: React.FC = () => {
                   onClick={handleCheckout}
                   className="flex-1"
                 >
-                  CHECKOUT NOW
+                  PROCEED TO CHECKOUT
                 </RetroButton>
                 <RetroButton
                   variant="outline"

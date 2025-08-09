@@ -63,19 +63,19 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectio
 
       {/* Social links */}
       <div className="mt-2 flex justify-center gap-3">
-        <a href="#" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://www.youtube.com/@mitchgeist" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Youtube className="h-4 w-4" />
         </a>
-        <a href="#" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://www.instagram.com/mitchgeist" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Instagram className="h-4 w-4" />
         </a>
-        <a href="#" aria-label="Spotify" title="Spotify" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://open.spotify.com/artist/1PscMkzaEoBfFBNfqdlP4e" aria-label="Spotify" title="Spotify" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Music className="h-4 w-4" />
         </a>
-        <a href="#" aria-label="Bandcamp" title="Bandcamp" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://bandcamp.com/mitchgeist" aria-label="Bandcamp" title="Bandcamp" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Music2 className="h-4 w-4" />
         </a>
-        <a href="#" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
+        <a href="https://www.tiktok.com/@mitchgeistmitchgeist" aria-label="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground hover-scale">
           <Disc className="h-4 w-4" />
         </a>
       </div>
