@@ -192,6 +192,15 @@
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
   }
+
+  /* Hover scale effect */
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* CRT and Parallax Effects */
