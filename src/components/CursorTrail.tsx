@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // Subtle cursor trail for desktop only. Fixed canvas overlay, pointer-events: none
 export const CursorTrail: React.FC = () => {
@@ -6,14 +6,17 @@ export const CursorTrail: React.FC = () => {
   const rafRef = useRef<number | null>(null);
   const pointsRef = useRef<{ x: number; y: number }[]>([]);
   const enabledRef = useRef<boolean>(false);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
     const isFinePointer = window.matchMedia('(pointer: fine)').matches;
     const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     enabledRef.current = isFinePointer && !isReducedMotion;
+    setEnabled(enabledRef.current);
     if (!enabledRef.current) return;
 
-    const canvas = canvasRef.current!;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -63,12 +66,10 @@ export const CursorTrail: React.FC = () => {
     };
   }, []);
 
-  if (!enabledRef.current) return null;
-
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-[60] opacity-70"
+      className={`pointer-events-none fixed inset-0 z-[60] opacity-70 ${enabled ? '' : 'hidden'}`}
       aria-hidden="true"
     />
   );
