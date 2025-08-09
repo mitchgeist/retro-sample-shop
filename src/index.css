@@ -193,3 +193,51 @@
     51%, 100% { opacity: 0; }
   }
 }
+
+/* CRT and Parallax Effects */
+@layer components {
+  .crt-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    animation: crt-flicker 6s infinite;
+  }
+  .crt-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      hsl(var(--foreground) / 0.04) 0px,
+      hsl(var(--foreground) / 0.04) 1px,
+      transparent 2px
+    );
+    mix-blend-mode: multiply;
+  }
+  .crt-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 60%,
+      hsl(var(--foreground) / 0.22) 100%
+    );
+  }
+  .parallax-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: hsl(var(--background));
+    will-change: transform;
+  }
+}
+
+@keyframes crt-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+  52% { opacity: 1; }
+  70% { opacity: 0.99; }
+  72% { opacity: 1; }
+}

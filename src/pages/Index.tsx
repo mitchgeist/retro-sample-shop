@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CartProvider } from '@/components/CartProvider';
 import { Navigation } from '@/components/Navigation';
 import CursorTrail from '@/components/CursorTrail';
+import { BackgroundEffects } from '@/components/BackgroundEffects';
 import { HomeSection } from '@/components/sections/HomeSection';
 import { SamplePacksSection } from '@/components/sections/SamplePacksSection';
 import { BeatsSection } from '@/components/sections/BeatsSection';
@@ -32,7 +33,8 @@ const Index = () => {
 
   return (
     <CartProvider>
-      <div className="min-h-screen bg-background pixel-grid">
+      <BackgroundEffects />
+      <div className="min-h-screen bg-background">
         <div className="container mx-auto p-4">
           <Navigation 
             currentSection={currentSection} 
